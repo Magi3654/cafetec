@@ -20,7 +20,7 @@ module.exports = {
       white: '#fff',
       gray: '#e9ecef',
       darkGray: '#6c757d',
-      babyBrown: '#ffe6a7',
+      babyYellow: '#ffee9d',
     },
   },
   plugins: [],

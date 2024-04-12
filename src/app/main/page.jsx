@@ -5,7 +5,7 @@ import Drinks from '../drinks/page'
 
 const Main = () => {
     return (
-        <div className="bg-white h-screen flex flex-col">
+        <div className="bg-white flex flex-col">
             <div className='flex'>
                 <div className="flex flex-col m-4 flex-1">
                     <p className="text-brown text-lg font-bold">Welcome</p>
