@@ -12,7 +12,7 @@ export default function Home() {
         height={0}
         alt=""
         sizes="100vw"
-        className="absolute top-0 left-0 w-full h-60 mb-7">
+        className="absolute top-0 left-0 w-full h-48 lg:h-48 mb-7">
 
       </Image>
 
@@ -25,7 +25,7 @@ export default function Home() {
         className="h-64 w-64">
       </Image>
 
-      <p className="text-white m-2">"Tu comida favorita, lista para llevar!"</p>
+      <p className="text-white m-2 sm:text-md lg:text-sm">"Tu comida favorita, lista para llevar!"</p>
 
       <Link href="/main">
         <button type="button" className="text-white bg-brown focus:ring-2 focus:outline-none font-medium rounded-2xl text-md px-8 py-2.5 text-center inline-flex items-center m-3">
@@ -42,7 +42,7 @@ export default function Home() {
           height={0}
           alt=""
           sizes="100vw"
-          className="absolute bottom-0 left-0 w-full h-60 mt-7">
+          className="absolute bottom-0 left-0 w-full h-48 lg:h-48 mt-7">
       </Image>
     </main>
   );
