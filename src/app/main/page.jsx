@@ -8,8 +8,8 @@ const Main = () => {
         <div className="bg-white flex flex-col">
             <div className='flex'>
                 <div className="flex flex-col m-4 flex-1">
-                    <p className="text-brown text-lg font-bold">Welcome</p>
-                    <p className="text-brown text-sm font-medium">Enjoy your favorite food</p>
+                    <p className="text-brown text-lg font-bold">Bienvenido</p>
+                    <p className="text-brown text-sm font-normal">Disfruta de tu comida favorita</p>
                     
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-7 m-7' fill='#ffc600'>

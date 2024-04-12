@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const ItemCard = ({title, image, description, price}) => {
   return (
-    <div className='m-2'>
-        <div class="bg-babyYellow border border-gray rounded-lg shadow-lg mr-5 w-36">
+    <div className='m-3'>
+        <div class="bg-babyYellow border border-gray rounded-lg shadow-lg w-36">
             <a href="#">
                 <Image
                     src={`/img/${image}`}
