@@ -1,6 +1,7 @@
 import React from 'react'
 import Menu from '../menu/page'
 import Search from '../search/page'
+import Drinks from '../drinks/page'
 
 const Main = () => {
     return (
@@ -17,6 +18,7 @@ const Main = () => {
             </div>
             <Search></Search>
             <Menu></Menu>
+            <Drinks></Drinks>
         </div>
     )
 }
