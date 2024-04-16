@@ -12,28 +12,28 @@ const Drinks = () => {
 
                 <div className="flex overflow-x-scroll font-semibold text-center mx-4">
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Café'}
                         image={'cafe.jpg'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Té caliente'}
                         image={'cafe.jpg'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Cappuccino'}
                         image={'cafe.jpg'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Chocolate'}
                         image={'cafe.jpg'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
@@ -49,31 +49,31 @@ const Drinks = () => {
 
                 <div className="flex overflow-x-scroll font-semibold text-center mx-4">
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Coca-Cola'}
                         image={'cafe.jpg'}
-                        description={'Vaso de 12 oz.'}
+                        description={'600 ml.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Licuado'}
                         image={'cafe.jpg'}
-                        description={'Vaso de 12 oz.'}
+                        description={'500 ml.'}
+                        price={'$35.00'}>
+                    </ItemCard>
+
+                    <ItemCard
+                        title={'Té Arizona'}
+                        image={'cafe.jpg'}
+                        description={'460 ml.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
-                        title={'Cafe'}
+                        title={'Agua Kirkland'}
                         image={'cafe.jpg'}
-                        description={'Vaso de 12 oz.'}
-                        price={'$25.00'}>
-                    </ItemCard>
-
-                    <ItemCard
-                        title={'Cafe'}
-                        image={'cafe.jpg'}
-                        description={'Vaso de 12 oz.'}
-                        price={'$25.00'}>
+                        description={'500 ml.'}
+                        price={'$10.00'}>
                     </ItemCard>
                 </div>
 
