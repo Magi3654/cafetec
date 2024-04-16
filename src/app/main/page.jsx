@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../menu/page'
 import Search from '../search/page'
-import Drinks from '../drinks/page'
+import Drinks from '../top/page'
 
 const Main = () => {
     return (
