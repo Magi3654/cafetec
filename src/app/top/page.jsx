@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import ItemCard from '../items/ItemCard';
-import Encabezado from '../encabezado/encabezado';
+import Encabezado from '../encabezado/Encabezado';
 
 const Top = () => {
     return (
