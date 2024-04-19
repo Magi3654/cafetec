@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Drinks from '../drinks/page';
 
-const Encabezado = ({title, icon, ruta}) => {
+
+const Encabezado = ({title, icon, route=''}) => {
   return (
     <div className='flex flex-1 justify-between'>
         <button type="button" className="text-darkGray bg-gray focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
@@ -10,7 +11,7 @@ const Encabezado = ({title, icon, ruta}) => {
             <span className='font-semibold' style={{whiteSpace: 'nowrap'}}>{title}</span>
         </button>
 
-        <Link href='/'>
+        <Link href={route}>
             <button type="button" className="text-darkGray focus:outline-none font-semibold text-sm px-3 py-2.5 text-right inline-flex items-center m-4">
                 Mirar más
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#6c757d" className="h-3.5 ml-2">
