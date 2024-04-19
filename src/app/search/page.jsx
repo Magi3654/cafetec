@@ -11,7 +11,7 @@ const Search = () => {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                     </svg>
                 </div>
-                <input type="search" id="search" className="block w-full p-4 ps-12 text-sm rounded-full bg-gray focus:ring-blue-500 focus:border-blue-500" placeholder="Buscar" required />
+                <input type="search" id="search" className="block w-full p-4 ps-12 text-sm rounded-full bg-gray focus:ring-blue-500 focus:border-blue-500 text-darkGray font-semibold" placeholder="Buscar" required />
                 <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-lightBrown focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 shadow">Buscar</button>
             </div>
         </form>
