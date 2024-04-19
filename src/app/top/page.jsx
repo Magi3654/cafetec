@@ -25,7 +25,7 @@ const Top = () => {
 
                     <ItemCard
                         title={'Licuado'}
-                        image={'cafe.jpg'}
+                        image={'licuado.png'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
                     </ItemCard>
