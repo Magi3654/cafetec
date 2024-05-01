@@ -57,21 +57,21 @@ const Top = () => {
                 <div className="flex overflow-x-scroll font-semibold text-center mx-4">
                     <ItemCard
                         title={'Cheetos'}
-                        image={'cafe.jpg'}
+                        image={'cheetos.webp'}
                         description={'160 gr.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
                         title={'Chokis'}
-                        image={'cafe.jpg'}
+                        image={'chokis.png'}
                         description={'76 gr.'}
                         price={'$35.00'}>
                     </ItemCard>
 
                     <ItemCard
                         title={'Nachos'}
-                        image={'cafe.jpg'}
+                        image={'nachos.png'}
                         description={'Sencillos'}
                         price={'$25.00'}>
                     </ItemCard>
