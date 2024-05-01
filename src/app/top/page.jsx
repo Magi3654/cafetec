@@ -24,7 +24,7 @@ const Top = () => {
                     </ItemCard>
 
                     <ItemCard
-                        title={'Licuado'}
+                        title={'Licuado Fresa'}
                         image={'licuado.png'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
@@ -32,14 +32,14 @@ const Top = () => {
 
                     <ItemCard
                         title={'Coca-cola'}
-                        image={'cafe.jpg'}
-                        description={'Vaso de 12 oz.'}
+                        image={'cocacola.png'}
+                        description={'Botella 600 ml.'}
                         price={'$25.00'}>
                     </ItemCard>
 
                     <ItemCard
                         title={'Cappuccino'}
-                        image={'cafe.jpg'}
+                        image={'capuccino.png'}
                         description={'Vaso de 12 oz.'}
                         price={'$25.00'}>
                     </ItemCard>
