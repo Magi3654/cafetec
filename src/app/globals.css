@@ -31,3 +31,62 @@ body {
     text-wrap: balance;
   }
 }
+
+.image-container{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+  gap: 20px; /* Espacio entre elementos */
+
+}
+
+/* Estilos para el botón del dropdown */
+.dropbtn {
+  background-color:#ffc600;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Estilos para el contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para el contenido del dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Estilos para los enlaces dentro del dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambia el color de fondo de los enlaces al pasar el ratón sobre ellos */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Muestra el dropdown cuando se pasa el ratón sobre el botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos adicionales para el dropdown cuando está activo */
+.dropdown.active .dropdown-content {
+  display: block;
+}
