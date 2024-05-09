@@ -46,30 +46,30 @@ function Snacks() {
 
         <div className="overflow-y-scroll font-semibold text-center grid grid-cols-2 gap-4" class="image-container">
             <ItemCard
-                    title={'Café'}
-                    image={'cafe.jpg'}
-                    description={'Vaso de 12 oz.'}
+                    title={'Cheetos'}
+                    image={'cheetos.webp'}
+                    description={'160gr.'}
                     price={'$25.00'}>
             </ItemCard>
 
             <ItemCard
-                    title={'Licuado Fresa'}
-                    image={'licuado.png'}
-                    description={'Vaso de 12 oz.'}
+                    title={'Chokis'}
+                    image={'chokis.png'}
+                    description={'76gr.'}
                     price={'$25.00'}>
             </ItemCard>
 
             <ItemCard
-                    title={'Coca-cola'}
-                    image={'cocacola.png'}
-                    description={'Botella 600 ml.'}
-                    price={'$25.00'}>
+                    title={'Nachos'}
+                    image={'nachos.png'}
+                    description={'Sencillos.'}
+                    price={'$45.00'}>
             </ItemCard>
 
             <ItemCard
-                    title={'Cappuccino'}
-                    image={'capuccino.png'}
-                    description={'Vaso de 12 oz.'}
+                    title={'Muffin'}
+                    image={'muffinArandano.png'}
+                    description={'1pz.'}
                     price={'$25.00'}>
             </ItemCard>
         </div>
