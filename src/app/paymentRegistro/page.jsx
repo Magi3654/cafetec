@@ -60,7 +60,7 @@ function page() {
                     </div>
 
                     {isVisible && (
-                        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100" id="country-selector-list" role="listbox" aria-activedescendant="country-0" tabindex="-1" aria-labelledby="country-selector">
+                        <div className="origin-top-right absolute border border-gray right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-semiGray" id="country-selector-list" role="listbox" aria-activedescendant="country-0" tabindex="-1" aria-labelledby="country-selector">
                             <div class="py-1" role="option" id="country-0" onClick={() => opcion("Estados Unidos")}>
                                 <p class="text-darkGray block px-4 py-2 text-md">Estados Unidos</p>
                             </div>
@@ -82,7 +82,7 @@ function page() {
         </section>
 
         <div className='fixed bottom-0 left-0 w-full p-2'>
-            <button className="w-full mx-auto my-3 p-3 bg-yellow text-white text-center text-lg font-bold rounded">Agregar tarjeta</button>
+            <button className="shadow w-full mx-auto my-3 p-3 bg-yellow text-white text-center text-lg font-bold rounded">Agregar tarjeta</button>
         </div>
     </div>
   )
