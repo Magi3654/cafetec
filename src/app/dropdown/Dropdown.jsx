@@ -17,6 +17,7 @@ const  Dropdown = () => {
       </button>
       {isOpen && (
         <div className="dropdown-content">
+          <a href='/main'>Inicio</a>
           <a href="/drinks">Bebidas</a>
           <a href="/snacks">Snacks</a>
           <a href="/food">Comida preparada</a>
