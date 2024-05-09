@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ItemCard from '../items/ItemCard';
 import Encabezado from '../encabezado/Encabezado';
