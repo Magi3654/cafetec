@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from 'next/link';
+import dbService from "./db/dbService";// BASE DE DATOS
+
 
 export default function Home() {
   return (
