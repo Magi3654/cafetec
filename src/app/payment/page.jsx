@@ -1,37 +1,43 @@
 import React from 'react'
+import Link from 'next/link'
 
 function page() {
   return (
-    <section className='fixed bottom-0 left-0 bg-gray border border-gray rounded-md p-3 mx-3 my-2'>
-            <p className='m-3 font-bold text-2xl'>Pago</p>
-
-            <div className="flex flex-col">
-                <p className='mx-3 text-md font-medium'>Numero de Tarjeta</p>
-                <input className="shadow appearance-none border rounded py-2 px-3 m-2 text-gray leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="0000 0000 0000 0000"/>
-            </div>
-            
-            <div className="flex mt-2">
-                <div className="flex flex-col">
-                    <p className='mx-3 text-md font-medium'>Fecha de vencimiento</p>
-                    <input className="shadow border rounded py-2 px-3 m-2 w-2/3 text-gray" type="text" placeholder="MM/AA"/>
-                </div>
-
-                <div className="flex flex-col">
-                    <p className='mx-3 text-md font-medium'>Codigo de seguridad</p>
-                    <input className="shadow border rounded py-2 px-3 m-2 w-2/3 text-gray" type="text" placeholder="CVV"/>
-                </div>
-
-            </div>
-            
-            <button className="shadow bg-yellow text-white text-xl font-bold py-3 px-4 mt-2 rounded w-full">Agregar tarjeta</button>
-
-            <div className="flex m-3 pt-6 px-2 text-2xl border-t-2 border-semiGray">
-                <p className='py-2 font-bold flex-none'>Total</p>
-                <p className='py-2 flex-1 text-right'>$0.00</p>
-            </div>
-
-            <button className="shadow bg-yellow text-white text-xl font-bold py-3 px-4 mt-2 rounded w-full">Pagar</button>
+    <div className="p-2 w-full">
+        <section className='w-full'>
+            <Link href="/carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='flex-none h-6 mt-4 mx-2' fill='#000'>
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                </svg>
+            </Link>
+            <p className='m-3 font-bold text-2xl'>Tarjetas registradas</p>
         </section>
+
+        <div className="flex mx-4 py-2 justify-center" id='tarjetaSeleccionada'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-5 mr-2 my-2'>
+                <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/>
+            </svg>
+            <label htmlFor="default-radio-1" className="text-md text-left font-normal py-2 w-full">Banco 0000 (Nombre)</label>
+
+            <Link href={'/payment'}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='h-5 mr-2 my-2' fill='#c06722'>
+                    <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                </svg>
+            </Link>
+        </div>
+
+        <Link href={'/paymentRegistro'}>
+            <div className="flex py-2 mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='h-4 mr-2 my-1' fill='#c06722'>
+                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                </svg>
+                <button className="flex-1 text-md font-semibold text-left text-lightBrown">Agregar tarjeta</button>
+            </div>
+        </Link>  
+
+
+    </div>
+    
   )
 }
 
