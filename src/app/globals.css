@@ -38,7 +38,7 @@ body {
   background-color:transparent;
   color: white;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   
   font-size: 16px;
   border: none;
@@ -49,9 +49,10 @@ body {
 /* Estilos para el contenedor del dropdown */
 .dropdown {
   display: flex;
-  justify-self:last baseline;
-
+  justify-content: space-between;
+  align-items: baseline;
 }
+
 
 /* Estilos para el contenido del dropdown */
 .dropdown-content {

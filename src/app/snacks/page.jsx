@@ -6,10 +6,10 @@ import Dropdown from '../dropdown/Dropdown';
 function Snacks() {
   return (
     <div className='flex flex-col'>
-            <p className='text-lg text-brown font-bold mx-4 pt-3'>Lo más vendido</p>
             
             <section>
                 <Dropdown/>
+                    <p className='text-lg text-brown font-bold mx-4 pt-3'>Snacks</p>
                 <Encabezado
                     title={'Snacks'}
                     route={'/snacks'}
