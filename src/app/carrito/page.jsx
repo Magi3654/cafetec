@@ -21,7 +21,7 @@ function Carrito() {
             <p className='flex-1 m-3 font-light text-lg text-right'>Order#0000</p>
         </section>
         
-        <section className='flex flex-col overflow-auto border-t-2 border-darkGray' style={{height: `${itemCompraSectionHeight}px`}}>
+        <section className='flex flex-col overflow-auto border-t-2 border-semiGray' style={{height: `${itemCompraSectionHeight}px`}}>
             <ItemCompra
                 title={'Café'}
                 image={'cafe.jpg'}
@@ -67,9 +67,9 @@ function Carrito() {
 
         <div className="fixed bottom-0 left-0 w-full">
             <section className='bg-gray border border-gray rounded-md p-3 mx-3 my-3'>
-                <p className='my-3 font-bold text-2xl'>Pago</p>
+                <p className='my-3 mx-3 font-bold text-2xl'>Pago</p>
                     
-                <div className="flex py-2 justify-center" id='tarjetaSeleccionada'>
+                <div className="flex mx-3 py-2 justify-center" id='tarjetaSeleccionada'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-5 mr-2 my-2'>
                         <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/>
                     </svg>
@@ -83,7 +83,7 @@ function Carrito() {
                 </div>
 
                 <Link href={'/payment'}>
-                    <div className="flex py-2">
+                    <div className="flex py-2 mx-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='h-4 mr-2 my-1'>
                             <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
                         </svg>
