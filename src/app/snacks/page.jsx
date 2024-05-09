@@ -2,55 +2,78 @@ import React from 'react'
 import ItemCard from '../items/ItemCard';
 import Encabezado from '../encabezado/Encabezado';
 import Dropdown from '../dropdown/Dropdown';
+import Link from 'next/link';
 
 function Snacks() {
   return (
-    <div className='flex flex-col'>
-            
-            <section>
-                <Dropdown/>
-                    <p className='text-lg text-brown font-bold mx-4 pt-3'>Snacks</p>
-                <Encabezado
-                    title={'Snacks'}
-                    route={'/snacks'}
-                    icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#6c757d" className="h-4 mr-2 my-2">
-                    <path d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6v0c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9v0c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
-                    </svg>}
-                />
-                <div className=" overflow-x-scroll font-semibold text-center my-4" class="image-container" >
-                    <ItemCard
-                        title={'Cheetos'}
-                        image={'cheetos.webp'}
-                        description={'160 gr.'}
-                        price={'$25.00'}>
-                    </ItemCard>
+    <div className='p-2 w-full'>
+       <section className='w-full'>
+            <div className="flex">
+                <Link href="/main" className='flex-none'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='flex-none h-6 mt-4 mx-2' fill='#000'>
+                        <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                    </svg>
+                </Link>
 
-                    <ItemCard
-                        title={'Chokis'}
-                        image={'chokis.png'}
-                        description={'76 gr.'}
-                        price={'$35.00'}>
-                    </ItemCard>
+                <Link href="/carrito" className='flex-1 flex justify-end'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-6 mt-4 mx-2' fill='#ffc600'>
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                    </svg>
+                </Link>
+            </div>
+            <p className='m-3 font-bold text-2xl'>Snacks</p>
+        </section>
 
-                    <ItemCard
-                        title={'Nachos'}
-                        image={'nachos.png'}
-                        description={'Sencillos'}
-                        price={'$25.00'}>
-                    </ItemCard>
+        <div className="flex overflow-x-scroll font-semibold text-center justify-center">
+            <Link href={'/snacks'}>
+                <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
+                    Papitas
+                </button>
+            </Link>
 
-                    <ItemCard
-                        title={'Muffin'}
-                        image={'cafe.jpg'}
-                        description={'1 pz.'}
-                        price={'$10.00'}>
-                    </ItemCard>
-                </div>
-            </section>
+            <Link href={'/snacks'}>
+                <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
+                    Galletas
+                </button>
+            </Link>
 
-            
-            
+            <Link href={'/snacks'}>
+                <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
+                    Otros
+                </button>
+            </Link>
         </div>
+
+        <div className="overflow-y-scroll font-semibold text-center grid grid-cols-2 gap-4" class="image-container">
+            <ItemCard
+                    title={'Café'}
+                    image={'cafe.jpg'}
+                    description={'Vaso de 12 oz.'}
+                    price={'$25.00'}>
+            </ItemCard>
+
+            <ItemCard
+                    title={'Licuado Fresa'}
+                    image={'licuado.png'}
+                    description={'Vaso de 12 oz.'}
+                    price={'$25.00'}>
+            </ItemCard>
+
+            <ItemCard
+                    title={'Coca-cola'}
+                    image={'cocacola.png'}
+                    description={'Botella 600 ml.'}
+                    price={'$25.00'}>
+            </ItemCard>
+
+            <ItemCard
+                    title={'Cappuccino'}
+                    image={'capuccino.png'}
+                    description={'Vaso de 12 oz.'}
+                    price={'$25.00'}>
+            </ItemCard>
+        </div>
+    </div> 
   )
 }
 
