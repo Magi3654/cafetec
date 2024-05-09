@@ -4,6 +4,10 @@ import Link from 'next/link'
 import ItemCompra from '../itemCompra/ItemCompra'
 
 function Carrito() {
+    // Calcula la altura disponible para el section que contiene los ItemCompra
+    const windowHeight = window.innerHeight;
+    const bottomSectionHeight = 500; // Establece la altura del section que contiene bottom-0, ajusta según necesites
+    const itemCompraSectionHeight = windowHeight - bottomSectionHeight;
     
   return (
     <div className='p-2 w-full'>
@@ -17,16 +21,51 @@ function Carrito() {
             <p className='flex-1 m-3 font-light text-lg text-right'>Order#0000</p>
         </section>
         
-        <section className='flex flex-col border-t-2 border-darkGray'>
+        <section className='flex flex-col overflow-auto border-t-2 border-darkGray' style={{height: `${itemCompraSectionHeight}px`}}>
             <ItemCompra
                 title={'Café'}
                 image={'cafe.jpg'}
-                description={'Vaso de 12 oz.'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                price={'$25.00'}>
+            </ItemCompra>
+
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
                 price={'$25.00'}>
             </ItemCompra>
         </section>
 
-        <section className='fixed bottom-0 left-0 bg-gray border border-gray rounded-md p-3 mx-3 my-3'>
+        <section className='fixed bottom-0 left-0 bg-gray border border-gray rounded-md p-3 mx-3 my-2'>
             <p className='m-3 font-bold text-2xl'>Pago</p>
 
             <div className="flex flex-col">
@@ -52,10 +91,7 @@ function Carrito() {
             </div>
 
             <button className="shadow bg-yellow text-white text-xl font-bold py-3 px-4 mt-2 rounded w-full">Pagar</button>
-        
         </section>
-
-        
     </div>
   )
 }
