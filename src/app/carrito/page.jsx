@@ -38,7 +38,7 @@ function Carrito() {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-5 mr-2 my-2'>
                         <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/>
                     </svg>
-                    <label htmlFor="default-radio-1" className="text-md text-left font-normal py-2 w-full">Banco 0000 (Nombre)</label>
+                    <label htmlFor="default-radio-1" className="text-md text-left font-normal py-2 w-full">Banco ····1234</label>
                     
                     <Link href={'/payment'}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='h-5 mx-3 my-2'>
@@ -55,7 +55,6 @@ function Carrito() {
                         <button className="flex-1 text-md font-semibold text-left">Agregar tarjeta</button>
                     </div>
                 </Link>    
-                
                     
                 <div className="flex m-3 pt-6 px-2 text-2xl border-t-2 border-semiGray">
                     <p className='py-2 font-bold flex-none'>Total</p>
