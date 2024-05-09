@@ -5,7 +5,7 @@ import Drinks from '../drinks/page';
 
 const Encabezado = ({title, icon, route=''}) => {
   return (
-    <div className='flex flex-1 justify-between'>
+    <div className='flex flex-1 justify-between mx-1'>
         <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
             {icon}
             <span className='font-semibold' style={{whiteSpace: 'nowrap'}}>{title}</span>
