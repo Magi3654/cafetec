@@ -1,7 +1,10 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Link from 'next/link'
+import ItemCompra from '../itemCompra/ItemCompra'
 
 function Carrito() {
+    
   return (
     <div className='p-2 w-full'>
         <section className='flex w-full'>
@@ -15,7 +18,12 @@ function Carrito() {
         </section>
         
         <section className='flex flex-col border-t-2 border-darkGray'>
-            
+            <ItemCompra
+                title={'Café'}
+                image={'cafe.jpg'}
+                description={'Vaso de 12 oz.'}
+                price={'$25.00'}>
+            </ItemCompra>
         </section>
 
         <section className='fixed bottom-0 left-0 bg-gray border border-gray rounded-md p-3 mx-3 my-3'>
