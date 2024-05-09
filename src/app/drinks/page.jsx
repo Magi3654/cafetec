@@ -2,57 +2,66 @@ import React from 'react'
 import ItemCard from '../items/ItemCard';
 import Encabezado from '../encabezado/Encabezado';
 import Dropdown from '../dropdown/Dropdown';
+import Search from '../search/page';
+import Link from 'next/link';
 
 function Drinks() {
   return (
-    <div className='flex flex-col'>
-       <div className='ml-4 mt-4'>
-                
-        <section>
-            <Dropdown/>
-            <p className='text-lg text-brown font-bold mx-4 pt-3'>Bebidas</p>
-            <Encabezado
-                title={'Bebidas'}
-                route={'/drinks'}
-                icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#6c757d" className="h-4 mr-2 my-2">
-                <path d="M88 0C74.7 0 64 10.7 64 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C120.5 112.3 128 119.9 128 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C119.5 47.7 112 40.1 112 24c0-13.3-10.7-24-24-24zM32 192c-17.7 0-32 14.3-32 32V416c0 53 43 96 96 96H288c53 0 96-43 96-96h16c61.9 0 112-50.1 112-112s-50.1-112-112-112H352 32zm352 64h16c26.5 0 48 21.5 48 48s-21.5 48-48 48H384V256zM224 24c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C232.5 112.3 240 119.9 240 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C231.5 47.7 224 40.1 224 24z"/>
-                </svg>}
-            />
-            <div className=" overflow-y-scroll font-semibold text-center mr-4" class="image-container">
-                <ItemCard
+    <div className='p-2 w-full'>
+       <section className='w-full'>
+            <Link href="/main">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='flex-none h-6 mt-4 mx-2' fill='#000'>
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                </svg>
+            </Link>
+            <p className='m-3 font-bold text-2xl'>Bebidas</p>
+        </section>
+
+        <div className="flex overflow-x-scroll font-semibold text-center justify-center">
+            <Link href={'/drinks'}>
+                <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
+                    Bebidas Calientes
+                </button>
+            </Link>
+
+            <Link href={'/snacks'}>
+                <button type="button" className="text-white bg-lightBrown focus:ring-2 focus:outline-none font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center m-3">
+                    Bebidas Frias
+                </button>
+            </Link>
+        </div>
+
+        <div className="overflow-y-scroll font-semibold text-center grid grid-cols-2 gap-4" class="image-container">
+            <ItemCard
                     title={'Café'}
                     image={'cafe.jpg'}
                     description={'Vaso de 12 oz.'}
                     price={'$25.00'}>
-                </ItemCard>
+            </ItemCard>
 
-                <ItemCard
+            <ItemCard
                     title={'Licuado Fresa'}
                     image={'licuado.png'}
                     description={'Vaso de 12 oz.'}
                     price={'$25.00'}>
-                </ItemCard>
+            </ItemCard>
 
-                <ItemCard
+            <ItemCard
                     title={'Coca-cola'}
                     image={'cocacola.png'}
                     description={'Botella 600 ml.'}
                     price={'$25.00'}>
-                </ItemCard>
+            </ItemCard>
 
-                <ItemCard
+            <ItemCard
                     title={'Cappuccino'}
                     image={'capuccino.png'}
                     description={'Vaso de 12 oz.'}
                     price={'$25.00'}>
-                </ItemCard>
-            </div>
-        </section>
+            </ItemCard>
+        </div>
     
     </div> 
-   
-    
-</div>
   )
 }
 

@@ -11,53 +11,18 @@ function Carrito() {
     
   return (
     <div className='p-2 w-full'>
+        <Link href="/main">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='flex-none h-6 mt-4 mx-2' fill='#000'>
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+            </svg>
+        </Link>
+
         <section className='flex w-full'>
-            <Link href="/main">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='flex-none h-6 mt-4 mx-2' fill='#6c757d'>
-                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
-                </svg>
-            </Link>
             <p className='flex-none m-3 font-bold text-2xl'>Carrito</p>
-            <p className='flex-1 m-3 font-light text-lg text-right'>Order#0000</p>
+            <p className='flex-1 m-3 font-light text-lg text-right'>Orden #0000</p>
         </section>
         
         <section className='flex flex-col overflow-auto border-t-2 border-semiGray' style={{height: `${itemCompraSectionHeight}px`}}>
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
-            <ItemCompra
-                title={'Café'}
-                image={'cafe.jpg'}
-                price={'$25.00'}>
-            </ItemCompra>
-
             <ItemCompra
                 title={'Café'}
                 image={'cafe.jpg'}

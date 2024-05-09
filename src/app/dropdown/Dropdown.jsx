@@ -11,18 +11,21 @@ const  Dropdown = () => {
 
   return (
     <div className="dropdown">
+
       <button className="dropbtn" onClick={toggleDropdown}>
-      <svg xmlns="http://www.w3.org/2000/svg" className='h-8' viewBox="0 0 448 512" fill='#ffc600'>
-        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" className='h-6' viewBox="0 0 448 512" fill='#ffc600'>
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+        </svg>
       </button>
+
       {isOpen && (
         <div className="dropdown-content">
           <a href='/main'>Inicio</a>
-          <a href="/drinks">Bebidas</a>
-          <a href="/snacks">Snacks</a>
-          <a href="/food">Comida preparada</a>
+          <a href="/payment">Tarjetas</a>
+          <a href="/paymentRegistro">Registro de tarjeta</a>
         </div>
       )}
+
       <div>
         <Link href="/carrito">
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-7 mt-7 mr-7' fill='#ffc600'>
