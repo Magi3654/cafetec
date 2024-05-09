@@ -1,9 +1,21 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 function page() {
+    const [isVisible, setIsVisible] = useState(false);
+    const [selected, setSelected] = useState('Seleccionar país');
+
+    const lista = () => {
+        setIsVisible(!isVisible);
+    }
+
+    const opcion = (country) => {
+        setSelected(country);
+        setIsVisible(false);
+    }
+
   return (
     <div className="p-2 w-full">
         <section className='w-full'>
@@ -18,24 +30,54 @@ function page() {
         <section className='pt-3 mx-3 my-2'>
             <div className="flex flex-col bg-gray border border-gray rounded-md p-2 shadow">
                 <p className='mx-3 text-md font-medium'>Número de Tarjeta</p>
-                <input className="shadow appearance-none border rounded py-2 px-3 m-2 text-gray leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="0000 0000 0000 0000"/>
+                <input className="shadow appearance-none border border-gray rounded py-2 px-3 m-2 text-darkGray leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="0000 0000 0000 0000"/>
             </div>
             
             <div className="flex mt-2">
                 <div className="flex flex-col bg-gray border border-gray rounded-md p-2 mr-2 shadow">
                     <p className='mx-3 text-md font-medium'>Fecha de vencimiento</p>
-                    <input className="shadow border rounded py-2 px-3 m-2 w-2/3 text-gray" type="text" placeholder="MM/AA"/>
+                    <input className="shadow border border-gray rounded py-2 px-3 m-2 w-2/3 text-darkGray" type="text" placeholder="MM/AA"/>
                 </div>
 
                 <div className="flex flex-col bg-gray border border-gray rounded-md p-2 shadow">
                     <p className='mx-3 text-md font-medium'>Código de seguridad</p>
-                    <input className="shadow border rounded py-2 px-3 m-2 w-2/3 text-gray" type="text" placeholder="CVV"/>
+                    <input className="shadow border border-gray rounded py-2 px-3 m-2 w-2/3 text-darkGray" type="text" placeholder="CVV"/>
                 </div>
             </div>
 
             <div className="flex flex-col mt-2 bg-gray border border-gray rounded-md p-2 shadow">
-                <p className='mx-3 text-md font-medium'>Apodo</p>
-                <input className="shadow appearance-none border rounded py-2 px-3 m-2 text-gray leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="e.j Mi tarjeta"/>
+                <p className='mx-3 text-md font-medium'>Pais</p>
+                <div class="relative inline-block text-left">
+                    <div className='p-2'>
+                        <button type="button" className="inline-flex w-full rounded-md border border-gray bg-white shadow-sm px-4 py-2 text-md text-darkGray" id="country-selector" onClick={lista} aria-haspopup="listbox" aria-expanded={isVisible ? 'true' : 'false'} aria-labelledby="country-selector-label">
+                        <p className='flex-none'>{selected}</p>
+                        <div className="flex flex-1 text-right justify-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='h-4 mt-1' fill='#6c757d'>
+                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                            </svg>
+                        </div>
+                        </button>
+                    </div>
+
+                    {isVisible && (
+                        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100" id="country-selector-list" role="listbox" aria-activedescendant="country-0" tabindex="-1" aria-labelledby="country-selector">
+                            <div class="py-1" role="option" id="country-0" onClick={() => opcion("Estados Unidos")}>
+                                <p class="text-darkGray block px-4 py-2 text-md">Estados Unidos</p>
+                            </div>
+                            <div class="py-1" role="option" id="country-1" onClick={() => opcion("Canadá")}>
+                                <p class="text-darkGray block px-4 py-2 text-md">Canadá</p>
+                            </div>
+                            <div class="py-1" role="option" id="country-2">
+                                <p class="text-darkGray block px-4 py-2 text-md" onClick={() => opcion("México")}>México</p>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            <div className="flex flex-col mt-2 bg-gray border border-gray rounded-md p-2 shadow">
+                <p className='mx-3 text-md font-medium'>Nombre del Propietario</p>
+                <input className="shadow appearance-none border border-gray rounded py-2 px-3 m-2 text-darkGray leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="e.j Mayra Mendez"/>
             </div>
         </section>
 
