@@ -17,13 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
 
 @layer utilities {
@@ -41,7 +35,7 @@ body {
 
 /* Estilos para el botón del dropdown */
 .dropbtn {
-  background-color:#ffc600;
+  background-color:transparent;
   color: white;
   padding: 1rem;
   margin: 1rem;
@@ -54,8 +48,9 @@ body {
 
 /* Estilos para el contenedor del dropdown */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-self:last baseline;
+
 }
 
 /* Estilos para el contenido del dropdown */
