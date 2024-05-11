@@ -3,17 +3,17 @@ import { prisma } from "../../../../config/db.js";
 export default async function handler(req, res){
     switch(req.method){
         case "GET":
-            return await getUser(req, res);
+            return await getCard(req, res);
         case "POST":
-            return await addUser(req, res);
+            return await addCard(req, res);
     }
 }
 
-const getUser = async(req, res)=> {
+const getCard = async(req, res)=> {
 
     try{
             
-        const result = await prisma.user.findMany();
+        const result = await prisma.payment.findMany();
         console.log(result);
         return res.status(200).json(result);
     }catch(error){
@@ -21,22 +21,22 @@ const getUser = async(req, res)=> {
     }
 }
 
-const addUser = async(req, res)=>{
+const addCard = async(req, res)=>{
     try{
-        
-        const {username, userlastname, email, password} = req.body
+
+        const {cardNumber,valid, cvv} = req.body
         const data ={
               
-            username   :username,
-            userlastname :userlastname,
-            email        :email,
-            password   :password
-
-        }
-        const result = await prisma.user.create({
-            data : data,
+            cardNumber :  cardNumber, 
+            valid      : valid, 
+            cvv        : cvv,
+     }
+        const result = await prisma.payment.create({
+            data  : data,
             select:{
-                id:true,
+                id: true,
+                type : true,
+
             }
         })
         return res.status(200).json(result); 
@@ -44,4 +44,3 @@ const addUser = async(req, res)=>{
         return res.status(500).json(error);
     }
 }
-
