@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  username     String?
+  userlastname String?
+  email        String    @unique
+  password     String
+  orders       Order[]   // Relación con las órdenes del usuario
+}
+
+model Product {
+  id           Int       @id @default(autoincrement())
+  nameproduct  String    @unique
+  description  String
+  price        Float
+  categories   String
+  orders       Order[]
+}
+
+model Order {
+  idOrder      Int       @id @default(autoincrement())
+  product      Product    @relation(fields: [nameProduct], references: [nameproduct])
+  nameProduct  String
+  count        Int
+  user         User      @relation(fields: [userId], references: [id])
+  userId       Int       
+  createdAt    DateTime  @default(now())
+  orderStatus  String
+  total        Float
+}
+
+model Payment {
+  id            Int       @id @default(autoincrement())
+  type          String
+  cardNumber    Int
+  valid         String
+  cvv           Int
+}
